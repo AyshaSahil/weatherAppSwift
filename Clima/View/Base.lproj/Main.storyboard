@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,7 +35,12 @@
                                                     <constraint firstAttribute="height" constant="40" id="JLX-SP-jLB"/>
                                                 </constraints>
                                                 <color key="tintColor" name="Customm"/>
-                                                <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <state key="normal">
+                                                    <imageReference key="backgroundImage" image="location.circle.fill" catalog="system" variableValue="0.60000000000000009"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="getCurrentLocationWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1b5-FQ-fiz"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-wL-W34">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
@@ -120,6 +126,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="CWP-r8-Jsy" id="8cQ-3l-ufV"/>
                         <outlet property="conditionImageView" destination="mYn-vV-MBC" id="gpD-FU-YB0"/>
+                        <outlet property="currentLocationButtonoutlet" destination="uqN-kS-Ypi" id="8gI-hd-Ywy"/>
                         <outlet property="searchTextField" destination="2eh-wL-W34" id="r5h-rY-SqK"/>
                         <outlet property="temperatureLabel" destination="w9o-tW-03D" id="mF4-vV-JxK"/>
                     </connections>
